@@ -39,12 +39,12 @@ public class WordPattern {
            if (map.containsKey(c)) {
                if (!map.get(c).equals(arr[i])) {
                    return false;
-               } else {
-                   if (map.containsValue(arr[i])) {
-                       return false;
-                   }
-                   map.put(c, arr[i]);
                }
+           } else {
+               if (map.containsValue(arr[i])) {
+                   return false;
+               }
+               map.put(c, arr[i]);
            }
        }
        return true;
