@@ -49,7 +49,7 @@ public class ValidSudoku {
             if (board[row][j] == board[i][j]) return false;
         }
         for (int col = 0; col < board[0].length; col++) {
-            if (col == i) continue;
+            if (col == j) continue;
             if (board[i][col] == board[i][j]) return false;
         }
         for (int row = (i / 3) * 3; row < (i / 3 + 1) * 3; row++) {
